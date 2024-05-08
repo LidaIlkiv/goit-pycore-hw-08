@@ -70,6 +70,9 @@ class Record:
     
     def __str__(self):
         return f"Contact name: {self.name.value}, phones: {'; '.join(p.value for p in self.phones)}, birthday: {self.birthday.value}"
+    
+    def __repr__(self):
+        return f"Contact name: {self.name.value}, phones: {'; '.join(p.value for p in self.phones)}, birthday: {self.birthday.value}"
 
 class AddressBook(UserDict):
     def add_record(self, record):
